@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\SixLabors.ImageSharp.3.0.0\build\SixLabors.ImageSharp.props" Condition="Exists('..\packages\SixLabors.ImageSharp.3.0.0\build\SixLabors.ImageSharp.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4660266-8EE4-415D-8C17-D37AADE14D5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Probeaufgabe_AutoCad</RootNamespace>
+    <AssemblyName>Probeaufgabe AutoCad</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="accoremgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2023\accoremgd.dll</HintPath>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2023\acdbmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2023\acmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="BitMiracle.LibTiff.NET, Version=2.4.649.0, Culture=neutral, PublicKeyToken=53879b3e20e7a7d6, processorArchitecture=MSIL">
+      <HintPath>..\packages\BitMiracle.LibTiff.NET.2.4.649\lib\net40\BitMiracle.LibTiff.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Barcode, Version=6.12.1.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport, Version=4.8.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.DataExport.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DataExport.ResourceMgr, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4bc1500157862925, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.DataExport.ResourceMgr.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=11.1.5.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.DocViewer.Forms, Version=7.10.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.DocViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=9.2.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=7.10.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.PdfViewer.Asp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=7.10.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.PdfViewer.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Presentation, Version=8.1.1.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=13.1.1.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Office.8.2.0\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.7.0.0\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MessageModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageModal.Designer.cs">
+      <DependentUpon>MessageModal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCommands.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MessageModal.resx">
+      <DependentUpon>MessageModal.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SixLabors.ImageSharp.3.0.0\build\SixLabors.ImageSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SixLabors.ImageSharp.3.0.0\build\SixLabors.ImageSharp.props'))" />
+  </Target>
+</Project>
